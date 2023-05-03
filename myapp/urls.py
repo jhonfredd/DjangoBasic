@@ -11,6 +11,7 @@ urlpatterns = [
     path('cltProject/<int:id>', views.consultaProject),
     path('tank/', views.tank),
     path('clttank/<int:id>', views.consultaTank),
-    path('clttanknombre/<str:titl>', views.consultaTankN)
+    path('clttanknombre/<str:titl>', views.consultaTankN),
+    path('CrearTask/',views.create_task)
     
 ]
