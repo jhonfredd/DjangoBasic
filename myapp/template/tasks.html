@@ -1,0 +1,22 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+    <h1>Hola este es el Tasks</h1>
+    {% for tas in task %}
+        <div>
+            <h1>{% if tas.done == False %} 🕘 {% else %} ✅  {%endif%} Title: {{tas.title}}</h1>
+            <!-- {% if tas.done == False%}
+                <p style="color:green">Tarea Realizada</p>
+            {% else %}
+                <p style="color:red">Tarea Pediente</p>
+            {%endif%} -->
+
+        </div>
+        <div>
+            <h3>Description: {{tas.description}}</h3>
+            <h3>Project: {{tas.project.name}}</h3>
+            {% if tas.done == False %} <button>😥 Porque No</button>  <button>😳 Mequieres</button> {% else %} <button>❌ Done</button> <button>✅ Check</button> {% endif %} 
+            
+        </div>
+    {%endfor%}
+{% endblock %}
