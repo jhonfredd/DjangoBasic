@@ -1,7 +1,7 @@
 from django.http import HttpResponse, JsonResponse
 from .models import Project, Tank
-from django.shortcuts import get_object_or_404,render,redirect
-from .forms import CreateNewTask
+from django.shortcuts import get_object_or_404, render, redirect
+from .forms import CreateNewTask, CreateNewProject
 
 # Create your views here.
 def indexw(request):
@@ -34,7 +34,7 @@ def entero(request,id):
 def project(request):
     data = list(Project.objects.values())
     # return JsonResponse(data, safe=False)
-    return render(request,'project.html',{
+    return render(request,'project/project.html',{
         'project':data
     })
 
@@ -46,7 +46,7 @@ def consultaProject(request,id):
 def tank(request):
     # return HttpResponse('<h1>tank</h1>')
     tasks = Tank.objects.all()
-    return render(request,'tasks.html',{
+    return render(request,'tasks/tasks.html',{
         'task': tasks
     })
 
@@ -60,11 +60,27 @@ def consultaTankN(request, titl):
 
 def create_task(request):
     if request.method == 'GET':
-        return render(request,'create_task.html',{
+        return render(request,'tasks/create_task.html',{
         'form' : CreateNewTask
         })
     else:
         Tank.objects.create(title=request.POST['title'],description= request.POST['description'], project_id=2)
-        return redirect('/CrearTask/')
+        return redirect('tasks')
+
+def create_project(request):
+    if request.method == 'GET':
+        return render(request,'project/create_project.html',{
+            'form': CreateNewProject
+        })   
+    else:
+        Project.objects.create(name=request.POST['name'])
+        return redirect('project')
     
-   
+def project_detail(request,id):
+    project = get_object_or_404(Project,id=id)
+    tasks = Tank.objects.filter(project_id = id)
+    print(project)
+    return render(request, 'project/detail.html',{
+        'project': project,
+        'tasks': tasks
+    })

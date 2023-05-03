@@ -1,18 +1,45 @@
-<nav> 
-    <ul>
-        <li>
-            <a href="/index/">Home</a>
-            <a href="/project/">Proyects</a>
-            <a href="/about/">about</a>
-            <a href="/string/descargar">string</a>
-            <a href="/integer/1">integer</a>
-            <a href="/cltProject/1">cltProject</a>
-            <a href="/tank/">tank</a>
-            <a href="/clttank/2">clttank</a>
-            <a href="/clttanknombre/Tarea de laravel">clttanknombre</a>
-            <a href="/CrearTask/">CrearTask</a>
-        </li>
-    </ul>
-</nav>
-{% block content %}
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Proyect</title>
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+</head>
+<body>
+    <nav class="navbar container"> 
+        <ul>
+            <li>
+                <a href="/index/">Index</a>
+            </li>
+            <li>
+                <a href="{% url 'project' %}">Proyects</a>
+            </li>
+            <li>
+                <a href="{% url 'acerca' %}">about</a>
+            </li>
+            <li>
+                <a href="/string/descargar">string</a>
+                 <!-- <a href="/integer/1">integer</a> -->
+                <!-- <a href="{% url 'consultaProject'}">cltProject</a> -->
+            </li>
+            <li>
+                <a href="{% url 'tasks' }">tank</a>
+            </li>
+            <li>
+                <a href="{% url 'crate_task' %}">CrearTask</a>
+                
+            </li>
+            <li>
+                <a href="{% url 'create_project' %}">CreateProject</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
