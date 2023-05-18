@@ -2,7 +2,7 @@
 (1). Revisar en la consola si tenemos python:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python --version<br>
 (2). Revisamos la version del pip:<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs;pip --version:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pip --version:<br>
 (3). Si no estan vamos a instalar python url de descarga:<br>
     https://www.python.org/downloads/<br>
 (4). Despues de instalado python instalamos el ambiente virtual de django<br>
