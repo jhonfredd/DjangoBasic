@@ -2,11 +2,11 @@
 (1). Revisar en la consola si tenemos python:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;python --version<br>
 (2). Revisamos la version del pip:<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspip --version:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs;pip --version:<br>
 (3). Si no estan vamos a instalar python url de descarga:<br>
     https://www.python.org/downloads/<br>
 (4). Despues de instalado python instalamos el ambiente virtual de django<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;pip install virtualenv<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pip install virtualenv<br>
 (5). Revisamos si esta instalado correctamente:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;virtualenv --version<br>
 (6). Colocamos el nombre en virtualenv:<br>
